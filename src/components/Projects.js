@@ -26,7 +26,7 @@ const Projects = () => {
       id: 3,
       title: "E-commerce",
       description: "Real-time weather information with forecasts and interactive maps.",
-      image: "https://via.placeholder.com/400x250",
+      image: "https://tse2.mm.bing.net/th/id/OIP.wxDCSWhj9fVDPVZ1Ut7JzwHaDy?pid=Api&P=0&h=220",
       tags: ["javascript", "api", "css"],
       category: "frontend"
     },
@@ -47,14 +47,14 @@ const Projects = () => {
       category: "frontend",
       link: "https://jemila2.github.io/Logicaloperation/"
     },
-    {
-      id: 6,
-      title: "Portfolio Website",
-      description: "A responsive portfolio website to showcase projects and skills.",
-      image: "https://via.placeholder.com/400x250",
-      tags: ["react", "tailwind", "responsive"],
-      category: "frontend"
-    }
+    // {
+    //   id: 6,
+    //   title: "Portfolio Website",
+    //   description: "A responsive portfolio website to showcase projects and skills.",
+    //    image:"https://picsum.photos/400/250?random=1",
+    //   tags: ["react", "tailwind", "responsive"],
+    //   category: "frontend"
+    // }
   ];
 
   const filters = [
