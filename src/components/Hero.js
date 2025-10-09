@@ -30,11 +30,13 @@ const Hero = () => {
               </a>
             </div>
           </div>
-          <div className="md:w-1/3 mt-10 md:mt-0">
+         <div className="md:w-1/3 mt-10 md:mt-0">
             <div className="w-48 h-48 mx-auto bg-indigo-100 dark:bg-indigo-900/30 rounded-full overflow-hidden shadow-lg">
-              <div className="w-full h-full flex items-center justify-center text-indigo-500">
-                <span className="text-6xl">👤</span>
-              </div>
+              <img 
+                src="https://tse4.mm.bing.net/th/id/OIP.TmSm9jNB9P2gYnU1ruZ_QQAAAA?pid=Api&P=0&h=220" 
+                alt="Jemila Abubakar"
+                className="w-full h-full object-cover"
+              />
             </div>
           </div>
         </div>

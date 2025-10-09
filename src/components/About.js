@@ -5,11 +5,13 @@ const About = () => {
     <section id="about" className="py-20 px-4 bg-gray-50 dark:bg-gray-800">
       <div className="container mx-auto max-w-4xl">
         <div className="flex flex-col md:flex-row items-center gap-12">
-          <div className="md:w-2/5">
-            <div className="w-64 h-64 mx-auto bg-indigo-100 dark:bg-indigo-900/30 rounded-full overflow-hidden shadow-lg">
-              <div className="w-full h-full flex items-center justify-center text-indigo-500">
-                <span className="text-7xl">👤</span>
-              </div>
+           <div className="md:w-1/3 mt-10 md:mt-0">
+            <div className="w-48 h-48 mx-auto bg-indigo-100 dark:bg-indigo-900/30 rounded-full overflow-hidden shadow-lg">
+              <img 
+                src="https://tse4.mm.bing.net/th/id/OIP.TmSm9jNB9P2gYnU1ruZ_QQAAAA?pid=Api&P=0&h=220" 
+                alt="Jemila Abubakar"
+                className="w-full h-full object-cover"
+              />
             </div>
           </div>
           <div className="md:w-3/5">
