@@ -12,7 +12,7 @@ const Projects = () => {
       tags: ["react", "node", "mongodb", "tailwind"],
       category: "fullstack",
       link: "https://jemila2.github.io/client2/",
-      github: "https://github.com/jemila2/client2" // Add GitHub links
+      github: "https://github.com/jemila2/client2" 
     },
     {
       id: 2,
@@ -129,7 +129,7 @@ const Projects = () => {
                         : 'bg-indigo-600 text-white hover:bg-indigo-700'
                     }`}
                   >
-                    {project.link === "#" ? 'Coming Soon' : 'Live Demo'}
+                    {project.link === "glittering-donut-ef7a62.netlify.app" ? 'Live Demo' : 'Live Demo'}
                   </a>
                   <a 
                     href={project.github} 
