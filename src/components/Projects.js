@@ -22,7 +22,7 @@ const Projects = () => {
       tags: ["react", "tailwind", "javascript"],
       category: "frontend",
       link: "https://fastidious-tulumba-d80cec.netlify.app",
-      github: "https://fastidious-tulumba-d80cec.netlify.app"
+      github: "https://github.com/your-username/task-management-app" // Fixed - add actual GitHub link
     },
     {
       id: 3,
@@ -31,8 +31,8 @@ const Projects = () => {
       image: "https://tse1.mm.bing.net/th/id/OIP.1IkXh3cYfWDyj_ciDYKKDgHaFj?pid=Api&P=0&h=220",
       tags: ["javascript", "api", "css", "html"],
       category: "frontend",
-      link: "glittering-donut-ef7a62.netlify.app", 
-      github: "glittering-donut-ef7a62.netlify.app"
+      link: "https://glittering-donut-ef7a62.netlify.app", // Fixed - added https://
+      github: "https://github.com/your-username/ecommerce-app" // Fixed - add actual GitHub link
     },
     {
       id: 4,
@@ -41,8 +41,8 @@ const Projects = () => {
       image: "https://tse2.mm.bing.net/th/id/OIP.wxDCSWhj9fVDPVZ1Ut7JzwHaDy?pid=Api&P=0&h=220",
       tags: ["react", "node", "mysql", "express"],
       category: "fullstack",
-      link: "#",
-      github: "#"
+      link: "#", // Update with actual link when available
+      github: "#" // Update with actual GitHub link when available
     },
     {
       id: 5,
@@ -66,10 +66,16 @@ const Projects = () => {
     ? projects 
     : projects.filter(project => project.category === activeFilter);
 
+  // Improved image error handler
+  const handleImageError = (e) => {
+    e.target.src = `https://via.placeholder.com/400x250/4F46E5/FFFFFF?text=Project+Image`;
+    e.target.alt = 'Project image not available';
+  };
+
   return (
     <section id="projects" className="py-20 px-4 bg-gray-50 dark:bg-gray-900">
       <div className="container mx-auto max-w-6xl">
-        <h2 className="text-3xl font-bold text-center mb-4">My Projects</h2>
+        <h2 className="text-3xl font-bold text-center mb-4 dark:text-white">My Projects</h2>
         <p className="text-gray-600 dark:text-gray-400 text-center mb-12 max-w-2xl mx-auto">
           Here are some of the projects I've worked on. Each one presented unique challenges and learning opportunities.
         </p>
@@ -100,9 +106,8 @@ const Projects = () => {
                   src={project.image} 
                   alt={project.title} 
                   className="w-full h-full object-cover transition-transform duration-300 hover:scale-110"
-                  onError={(e) => {
-                    e.target.src = 'https://via.placeholder.com/400x250/4F46E5/FFFFFF?text=Project+Image';
-                  }}
+                  onError={handleImageError}
+                  loading="lazy"
                 />
               </div>
               <div className="p-6">
@@ -128,14 +133,20 @@ const Projects = () => {
                         ? 'bg-gray-300 dark:bg-gray-600 text-gray-500 dark:text-gray-400 cursor-not-allowed'
                         : 'bg-indigo-600 text-white hover:bg-indigo-700'
                     }`}
+                    onClick={(e) => project.link === "#" && e.preventDefault()}
                   >
-                    {project.link === "glittering-donut-ef7a62.netlify.app" ? 'Live Demo' : 'Live Demo'}
+                    Live Demo
                   </a>
                   <a 
                     href={project.github} 
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex-1 text-center py-2 px-4 bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-300 rounded-lg hover:bg-gray-300 dark:hover:bg-gray-600 transition-colors text-sm font-medium"
+                    className={`flex-1 text-center py-2 px-4 rounded-lg text-sm font-medium transition-colors ${
+                      project.github === "#" 
+                        ? 'bg-gray-300 dark:bg-gray-600 text-gray-500 dark:text-gray-400 cursor-not-allowed'
+                        : 'bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-300 hover:bg-gray-300 dark:hover:bg-gray-600'
+                    }`}
+                    onClick={(e) => project.github === "#" && e.preventDefault()}
                   >
                     Code
                   </a>
