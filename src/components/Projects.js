@@ -31,8 +31,8 @@ const Projects = () => {
       image: "https://tse1.mm.bing.net/th/id/OIP.1IkXh3cYfWDyj_ciDYKKDgHaFj?pid=Api&P=0&h=220",
       tags: ["javascript", "api", "css", "html"],
       category: "frontend",
-      link: "https://glittering-donut-ef7a62.netlify.app", // Fixed - added https://
-      github: "https://github.com/your-username/ecommerce-app" // Fixed - add actual GitHub link
+      link: "https://glittering-donut-ef7a62.netlify.app", 
+      github: "https://github.com/jemila2/ecommerce-app" 
     },
     {
       id: 4,
@@ -41,8 +41,8 @@ const Projects = () => {
       image: "https://tse2.mm.bing.net/th/id/OIP.wxDCSWhj9fVDPVZ1Ut7JzwHaDy?pid=Api&P=0&h=220",
       tags: ["react", "node", "mysql", "express"],
       category: "fullstack",
-      link: "#", // Update with actual link when available
-      github: "#" // Update with actual GitHub link when available
+      link: "#",
+      github: "#" 
     },
     {
       id: 5,
